@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -22,6 +22,8 @@ requirements:
   host:
     - pip
     - python
+    - setuptools >=45
+    - setuptools-scm >=6.0.1
   run:
     - importlib-metadata  # [py<38]
     - python
