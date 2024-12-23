@@ -1,18 +1,18 @@
 {% set name = "inflate64" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/inflate64-{{ version }}.tar.gz
-  sha256: 3278827b803cf006a1df251f3e13374c7d26db779e5a33329cc11789b804bc2d
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/inflate64-{{ version }}.tar.gz
+  sha256: 3b1c83c22651b5942b35829df526e89602e494192bf021e0d7d0b600e76c429d
 
 build:
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   build:
